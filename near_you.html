@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cafe Finder - Google Maps</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    #map {
+      height: 500px;
+      width: 100%;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #f4f4f9;
+    }
+    input {
+      padding: 8px;
+      width: 250px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      padding: 8px 15px;
+      background: #ff4d4d;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h2>☕ Cafe Finder (Google Maps)</h2>
+
+<input type="text" id="cafeInput" placeholder="Enter cafe name...">
+<button onclick="findCafe()">Find</button>
+
+<div id="map"></div>
+
+<script>
+  let map;
+  let geocoder;
+  let marker;
+
+  function initMap() {
+    map = new google.maps.Map(document.getElementById("map"), {
+      center: { lat: 28.6139, lng: 77.2090 }, // Delhi default
+      zoom: 12,
+    });
+    geocoder = new google.maps.Geocoder();
+  }
+
+  function findCafe() {
+    const cafeName = document.getElementById("cafeInput").value;
+    if (!cafeName) {
+      alert("Please enter a cafe name!");
+      return;
+    }
+
+    geocoder.geocode({ address: cafeName }, (results, status) => {
+      if (status === "OK") {
+        const location = results[0].geometry.location;
+        map.setCenter(location);
+
+        if (marker) marker.setMap(null);
+        marker = new google.maps.Marker({
+          map: map,
+          position: location,
+        });
+      } else {
+        alert("Cafe not found: " + status);
+      }
+    });
+  }
+</script>
+
+<!-- Load Google Maps SDK -->
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjKiNQdjvlVGDQHoZYutHyc4SgMQuDOHk&callback=initMap">
+</script>
+
+</body>
+</html>
