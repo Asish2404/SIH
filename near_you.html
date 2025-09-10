@@ -1,15 +1,9 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Cafe Finder - Google Maps</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        #map {
-            height: 500px;
-            width: 100%;
-        }
-
         body {
             font-family: Arial, sans-serif;
             text-align: center;
@@ -31,11 +25,17 @@
             border-radius: 5px;
             cursor: pointer;
         }
+
+        #map {
+            height: 500px;
+            width: 80%;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+        }
     </style>
 </head>
-
 <body>
-
     <h2>☕ Cafe Finder (Google Maps)</h2>
 
     <input type="text" id="cafeInput" placeholder="Enter cafe name...">
@@ -44,16 +44,13 @@
     <div id="map"></div>
 
     <script>
-        let map;
-        let geocoder;
-        let marker;
+        let map, geocoder, marker;
 
         function initMap() {
             map = new google.maps.Map(document.getElementById("map"), {
-                center: { lat: 22.5726, lng: 88.3639 }, // Default: Kolkata
+                center: { lat: 22.5726, lng: 88.3639 }, // Default Kolkata
                 zoom: 12
             });
-
             geocoder = new google.maps.Geocoder();
         }
 
@@ -81,12 +78,9 @@
         }
     </script>
 
-    <!-- Load Google Maps SDK -->
+    <!-- Replace YOUR_API_KEY with your actual working Google Maps API key -->
     <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjKiNQdjvlVGDQHoZYutHyc4SgMQuDOHk&callback=initMap">
-        </script>
-
-
+        src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
 </body>
-
 </html>
