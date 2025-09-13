@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cafe Finder with Route - OpenStreetMap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!-- Leaflet Routing Machine CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
+    <link rel="stylesheet" href="map.css">
+</head>
+
+<body>
+    <div class="nav">
+        <div class="nav-bar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <!-- <li><a href="#"></a></li> -->
+                <li><a href="map.html">Near You</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li id="button"><a href="#">Log In</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="moto">
+        <marquee behavior="" direction="">Sustainable Energy, Reliable Charging.</marquee>
+    </div>
+    <section class="middle">
+        <div class="content">
+            <h1>Find Charging Stations Near You</h1>
+            <p>Discover the nearest electric vehicle charging stations with ease. Our interactive map helps you locate
+                stations based on your current location or a specified area.</p>
+            <!-- <button class="bn"><a href="#map">Locate Now</a></button> -->
+        </div>
+        <div class="search">
+            <input type="text" id="cafeInput" placeholder="Enter cafe name...">
+            <select id="mode">
+                <option value="car">🚗 Car</option>
+                <option value="foot">🚶 Walk</option>
+                <option value="bike">🚴 Bike</option>
+            </select>
+            <button onclick="findCafe()">Find</button>
+        </div>
+        <div id="map"></div>
+    </section>
+
+    <section class="cafe">
+        <h2>Charging Stations</h2>
+        <div class="cafes">
+            <div class="cafelist">
+                <div class="image">
+                    <img src="https://tse1.mm.bing.net/th/id/OIP.X1cpHERJ7httBiX9Ug2r1QHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+                        alt="">
+                </div>
+                <div class="content2">
+                    <p>Starbucks</p>
+                </div>
+            </div>
+            <div class="cafelist">
+                <div class="image">
+                    <img src="https://assets.myhubble.money/brand-assets/logo-images-wp/cafe-coffee-day-logo.webp"
+                        alt="">
+                </div>
+                <div class="content2">
+                    <p>Cafe Coffee Day</p>
+                </div>
+            </div>
+            <div class="cafelist">
+                <div class="image">
+                    <img src="https://assets.myhubble.money/brand-assets/logo-images-wp/cafe-coffee-day-logo.webp"
+                        alt="">
+                </div>
+                <div class="content2">
+                    <p>Craft Coffee</p>
+                </div>
+            </div>
+            <div class="cafelist">
+                <div class="image">
+                    <img src="https://assets.myhubble.money/brand-assets/logo-images-wp/cafe-coffee-day-logo.webp"
+                        alt="">
+                </div>
+                <div class="content2">
+                    <p>Cineplexx91</p>
+                </div>
+            </div>
+            <div class="cafelist">
+                <div class="image">
+                    <img src="https://assets.myhubble.money/brand-assets/logo-images-wp/cafe-coffee-day-logo.webp"
+                        alt="">
+                </div>
+                <div class="content2">
+                    <p>Brewhivee Cafe</p>
+                </div>
+            </div>
+            <div class="cafelist">
+                <div class="image">
+                    <img src="https://assets.myhubble.money/brand-assets/logo-images-wp/cafe-coffee-day-logo.webp"
+                        alt="">
+                </div>
+                <div class="content2">
+                    <p>Serra Resto Cafe</p>
+                </div>
+            </div>
+            <div class="cafelist">
+                <div class="image">
+                    <img src="https://assets.myhubble.money/brand-assets/logo-images-wp/cafe-coffee-day-logo.webp"
+                        alt="">
+                </div>
+                <div class="content2">
+                    <p>Bro Cafe	</p>
+                </div>
+            </div>
+            <div class="cafelist">
+                <div class="image">
+                    <img src="https://assets.myhubble.money/brand-assets/logo-images-wp/cafe-coffee-day-logo.webp"
+                        alt="">
+                </div>
+                <div class="content2">
+                    <p>Chai Garam Cafe </p>
+                </div>
+            </div>
+            <div class="cafelist">
+                <div class="image">
+                    <img src="https://assets.myhubble.money/brand-assets/logo-images-wp/cafe-coffee-day-logo.webp"
+                        alt="">
+                </div>
+                <div class="content2">
+                    <p>The Purple Blend Cafe</p>
+                </div>
+            </div>
+            <div class="cafelist">
+                <div class="image">
+                    <img src="https://assets.myhubble.money/brand-assets/logo-images-wp/cafe-coffee-day-logo.webp"
+                        alt="">
+                </div>
+                <div class="content2">
+                    <p>Aldo Cafe</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <!-- Routing Machine -->
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+
+    <script src="map.js"></script>
+</body>
+
+</html>
+

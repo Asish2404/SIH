@@ -330,7 +330,129 @@ footer {
     gap: 200px;
 }
 
-iframe{
+iframe {
     justify-content: flex-end;
     border-radius: 20px;
+}
+
+
+@media (max-width: 575.98px) {
+    .nav-bar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-bar a {
+        font-size: 16px;
+    }
+
+    .middle {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .middle-img {
+        width: 95%;
+        height: auto;
+    }
+
+    .middle-img img {
+        height: auto;
+    }
+
+    .content2 {
+        flex-direction: column;
+        width: 90%;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .total {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 20px;
+        height: auto;
+    }
+}
+
+/* Small devices (landscape phones, 576px–767px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .nav-bar a {
+        font-size: 18px;
+    }
+
+    .middle-img {
+        width: 90%;
+    }
+
+    .content2 {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .total {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 30px;
+        height: auto;
+    }
+}
+
+/* Medium devices (tablets, 768px–991px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .nav-bar a {
+        font-size: 18px;
+    }
+
+    .middle-img {
+        width: 85%;
+    }
+
+    .content2 {
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .total {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+}
+
+/* Large devices (desktops, 992px–1199px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .nav-bar a {
+        font-size: 19px;
+    }
+
+    .middle-img {
+        width: 80%;
+    }
+
+    .content2 {
+        width: 85%;
+    }
+}
+
+/* Extra large devices (1200px and above) */
+@media (min-width: 1200px) {
+    .nav-bar a {
+        font-size: 20px;
+    }
+
+    .middle-img {
+        width: 75%;
+    }
+
+    .content2 {
+        width: max-content;
+    }
 }
