@@ -69,6 +69,17 @@ html {
     transition: all 0.3s ease;
 }
 
+select {
+    width: 200px;
+    overflow: hidden;
+}
+
+select>option {
+    border: none;
+    background: #e8e8e8;
+    margin: .4rem 0;
+}
+
 #button {
     background-color: rgb(126, 187, 34);
     border-radius: 8px;
@@ -92,7 +103,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
 }
 
@@ -112,7 +123,18 @@ html {
     padding: 15px;
 }
 
-.bn a{
+
+.bn1 a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.bn a {
     text-decoration: none;
     color: white;
     font-size: 20px;
@@ -121,7 +143,10 @@ html {
     border-radius: 5px;
     transition: all 0.3s ease;
 }
-.bn:hover{
+
+.bn2:hover,
+.bn1:hover,
+.bn:hover {
     color: white;
     box-shadow: 0 0 10px rgb(185, 5, 5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -154,29 +179,34 @@ button {
 }
 
 #cafe {
-    display: flex;
-    flex-direction: column;
-    margin: 20px;
-    gap: 20px;
+    padding: 40px;
+    text-align: center;
 }
 
-.cafelist {
-    text-align: left;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color: rgb(232, 230, 230);
-    height: 250px;
-    width: 250px;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
+#cafe h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
 }
 
 .cafes {
     display: flex;
-    gap: 50px;
+    gap: 40px;
     flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cafelist {
+    position: relative;
+    background: #e8e6e6;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 250px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
 
@@ -184,13 +214,6 @@ button {
     background-color: #f0f0f0;
     transform: scale(1.05);
     box-shadow: 0 6px 15px rgba(93, 99, 83, 0.6);
-    cursor: pointer;
-}
-
-.content2 p {
-    font-size: 1.2em;
-    font-weight: bold;
-    text-align: center;
 }
 
 .image {
@@ -200,11 +223,68 @@ button {
 }
 
 .image img {
-    margin: 20px;
     height: 130px;
     width: 130px;
     border-radius: 18px;
+    object-fit: cover;
 }
+
+.content2 p {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(2px);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.cafelist:hover .overlay {
+    opacity: 1;
+}
+
+.overlay {
+    display: flex;
+    flex-direction: column;
+}
+
+.overlay ul {
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin: 0;
+    padding: 0;
+}
+
+.overlay li {
+    list-style: decimal;
+    padding: 0;
+    margin: 0;
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+}
+
 
 footer {
     background-color: #D7CCC8;
@@ -215,10 +295,6 @@ footer {
     align-items: center;
     justify-content: center;
     gap: 200px;
-}
-
-.contat {
-    justify-content: flex-start;
 }
 
 .social-media {
