@@ -1236,25 +1236,34 @@ total {
     .how-section {
         padding: 40px 15px;
     }
+
     .how-section h2 {
         font-size: 1.8rem;
         margin-bottom: 25px;
     }
+
     .steps {
         flex-direction: column;
         gap: 20px;
+        align-items: center;
     }
+
     .step {
         width: 90%;
+        max-width: 300px;
         padding: 20px;
+        box-sizing: border-box;
     }
+
     .step span {
         font-size: 1.2rem;
         padding: 8px 16px;
     }
+
     #steps {
         font-size: 1rem;
     }
+
     #How {
         font-size: 22px;
     }
@@ -1265,22 +1274,29 @@ total {
     .how-section h2 {
         font-size: 2rem;
     }
+
     .steps {
         flex-wrap: wrap;
         gap: 25px;
         justify-content: center;
     }
+
     .step {
         width: 45%;
+        max-width: 250px;
         padding: 22px;
+        box-sizing: border-box;
     }
+
     .step span {
         font-size: 1.3rem;
         padding: 9px 18px;
     }
+
     #steps {
         font-size: 1.05rem;
     }
+
     #How {
         font-size: 24px;
     }
@@ -1292,10 +1308,14 @@ total {
         gap: 30px;
         justify-content: space-around;
     }
+
     .step {
         width: 180px;
+        max-width: 220px;
         padding: 23px;
+        box-sizing: border-box;
     }
+
     .step span {
         font-size: 1.4rem;
         padding: 9px 18px;
@@ -1410,6 +1430,7 @@ iframe {
     border-radius: 13px;
 }
 
+
 /* Extra small devices (phones <576px) */
 @media (max-width: 575.98px) {
     footer {
@@ -1418,10 +1439,12 @@ iframe {
         height: auto;
         padding: 20px 10px;
     }
+
     .social-media img {
         height: 35px;
         width: 35px;
     }
+
     iframe {
         width: 90%;
         height: auto;
@@ -1437,10 +1460,12 @@ iframe {
         height: auto;
         padding: 25px;
     }
+
     .social-media img {
         height: 38px;
         width: 38px;
     }
+
     iframe {
         width: 80%;
         height: auto;
@@ -1455,10 +1480,12 @@ iframe {
         gap: 100px;
         height: 250px;
     }
+
     .social-media img {
         height: 40px;
         width: 40px;
     }
+
     iframe {
         width: 50%;
         height: auto;
@@ -1471,6 +1498,7 @@ iframe {
         gap: 150px;
         height: 270px;
     }
+
     iframe {
         width: 40%;
     }
@@ -1482,6 +1510,7 @@ iframe {
         gap: 200px;
         height: 270px;
     }
+
     iframe {
         width: 35%;
     }
