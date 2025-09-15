@@ -354,8 +354,9 @@
 /* footer */
 
 
+
 footer {
-  background-color: #D7CCC8;
+  background-color: #0b2d32;
   height: 270px;
   width: 100%;
   display: flex;
@@ -365,6 +366,12 @@ footer {
   gap: 200px;
   padding: 20px;
   flex-wrap: wrap;
+}
+
+
+footer p,
+h2 {
+  color: white;
 }
 
 .social-media {
