@@ -706,8 +706,10 @@ footer {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     gap: 200px;
+    padding: 20px;
+    flex-wrap: wrap;
 }
 
 .social-media {
@@ -728,8 +730,6 @@ footer {
 .social-media img:hover {
     height: 48px;
     width: 48px;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     transform: scale(1.2) translateY(-8px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
     border-radius: 18px;
@@ -738,8 +738,10 @@ footer {
 iframe {
     justify-content: flex-end;
     border-radius: 20px;
+    max-width: 100%;
 }
 
+/* Twitter iframe */
 #twitter {
     border-radius: 13px;
 }

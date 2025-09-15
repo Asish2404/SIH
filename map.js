@@ -1,3 +1,4 @@
+
 let map, cafeMarker, routingControl;
 
 // Initialize map
@@ -92,24 +93,24 @@ function findCafe() {
 
 // cafe finder button event
 document.addEventListener("DOMContentLoaded", function () {
-    const chargerSelect = document.getElementById("charger");
-    const cafeList = document.querySelectorAll(".cafelist");
+  const chargerSelect = document.getElementById("charger");
+  const cafeList = document.querySelectorAll(".cafelist");
 
-    chargerSelect.addEventListener("change", function () {
-        const selectedValue = this.value;
+  chargerSelect.addEventListener("change", function () {
+    const selectedValue = this.value;
 
-        cafeList.forEach(cafe => {
-            const options = cafe.querySelectorAll(".overlay ul li");
-            let matchFound = false;
+    cafeList.forEach(cafe => {
+      const options = cafe.querySelectorAll(".overlay ul li");
+      let matchFound = false;
 
-            options.forEach(opt => {
-                if (opt.textContent.trim() === selectedValue) {
-                    matchFound = true;
-                }
-            });
+      options.forEach(opt => {
+        if (opt.textContent.trim() === selectedValue) {
+          matchFound = true;
+        }
+      });
 
-            cafe.style.visibility = matchFound || selectedValue === "" ? "visible" : "hidden";
-            cafe.style.position = matchFound || selectedValue === "" ? "relative" : "absolute";
-        });
+      cafe.style.visibility = matchFound || selectedValue === "" ? "visible" : "hidden";
+      cafe.style.position = matchFound || selectedValue === "" ? "relative" : "absolute";
     });
+  });
 });

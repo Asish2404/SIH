@@ -1345,52 +1345,7 @@ footer {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    gap: 200px;
-}
-
-.social-media {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 15px;
-}
-
-.social-media img {
-    margin: 10px;
-    height: 40px;
-    width: 40px;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.social-media img:hover {
-    height: 48px;
-    width: 48px;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    transform: scale(1.2) translateY(-8px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-    border-radius: 18px;
-}
-
-iframe {
-    justify-content: flex-end;
-    border-radius: 20px;
-}
-
-#twitter {
-    border-radius: 13px;
-}
-
-footer {
-    background-color: #D7CCC8;
-    height: 270px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     gap: 200px;
     padding: 20px;
     flex-wrap: wrap;
