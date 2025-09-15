@@ -135,7 +135,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
 }
 
@@ -153,6 +153,51 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
+
+@media (max-width: 575.98px) {
+  .login-container {
+    width: 90%;
+    height: auto;
+    flex-direction: column;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .login-container {
+    width: 95%;
+    height: auto;
+    flex-direction: column;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .login-container {
+    width: 700px;
+    height: auto;
+    flex-direction: row;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .login-container {
+    width: 800px;
+    height: 500px;
+    flex-direction: row;
+  }
+}
+
+/* Extra large devices (1200px and up) */
+@media (min-width: 1200px) {
+  .login-container {
+    width: 850px;
+    height: 500px;
+    flex-direction: row;
+  }
+}
+
 /* Left image section */
 .login-image {
   flex: 1;
@@ -167,6 +212,50 @@
   width: 50%;
   height: 50%;
   object-fit: cover;
+}
+
+@media (max-width: 575.98px) {
+  .login-image {
+    height: 200px;
+    /* set a fixed height when stacked */
+  }
+
+  .login-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+/* Small devices (landscape phones, ≥576px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .login-image {
+    height: 250px;
+  }
+
+  .login-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+/* Medium devices (tablets, ≥768px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .login-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+/* Large devices (≥992px) */
+@media (min-width: 992px) {
+  .login-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
 }
 
 /* Right form section */
@@ -241,8 +330,10 @@
 
 .social-login {
   display: flex;
-  justify-content: space-between;
   margin-top: 20px;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
 }
 
 .social-login button {
@@ -270,7 +361,217 @@
   text-decoration: none;
 }
 
+.bn1 button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  transition:
+    transform 0.35s ease-in-out,
+    box-shadow 0.35s ease-in-out,
+    background-color 0.35s ease-in-out,
+    border-color 0.35s ease-in-out,
+    color 0.35s ease-in-out;
+}
 
+.bn1 img {
+  height: 24px;
+  width: 24px;
+}
+
+.bn1 button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: black;
+  border-color: #999;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
+}
+
+.login-form {
+  flex: 1;
+  padding: 60px;
+  color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url("login portion background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.login-form h2 {
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+.login-form p {
+  margin-bottom: 30px;
+  font-size: 14px;
+  color: #565759;
+}
+
+.login-form input {
+  padding: 12px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgb(11, 45, 50);
+  color: white;
+}
+
+.login-form input::placeholder {
+  color: #ffffff;
+}
+
+.login-form button {
+  padding: 12px;
+  background-color: rgb(126, 187, 34);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.login-form button:hover {
+  background-color: rgb(11, 45, 50);
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform: scale(1);
+}
+
+.login-form .options {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.or-text {
+  text-align: center;
+  font-size: 14px;
+  color: rgb(11, 45, 50);
+}
+
+.social-login {
+  display: flex;
+  margin-top: 20px;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-login button {
+  flex: 1;
+  margin: 0 5px;
+  padding: 10px;
+  background-color: #ececec;
+  color: rgb(11, 45, 50);
+  border: none;
+  border-radius: 6px;
+  border-color: rgb(11, 45, 50);
+  cursor: pointer;
+}
+
+.highlight-link {
+  color: rgb(11, 45, 50);
+  text-decoration: none;
+}
+
+.bn1 button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  transition:
+    transform 0.35s ease-in-out,
+    box-shadow 0.35s ease-in-out,
+    background-color 0.35s ease-in-out,
+    border-color 0.35s ease-in-out,
+    color 0.35s ease-in-out;
+}
+
+.bn1 img {
+  height: 24px;
+  width: 24px;
+}
+
+.bn1 button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: black;
+  border-color: #999;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
+}
+
+/* 📱 Extra small devices (<576px) */
+@media (max-width: 575.98px) {
+  .login-form {
+    padding: 30px 20px;
+  }
+  .login-form h2 {
+    font-size: 22px;
+  }
+  .login-form p {
+    font-size: 12px;
+  }
+  .login-form input, 
+  .login-form button {
+    font-size: 14px;
+    padding: 10px;
+  }
+  .social-login {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .social-login button {
+    width: 100%;
+  }
+}
+
+/* 📱 Small devices (≥576px and <768px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .login-form {
+    padding: 40px;
+  }
+  .login-form h2 {
+    font-size: 24px;
+  }
+  .login-form p {
+    font-size: 13px;
+  }
+  .social-login {
+    gap: 15px;
+  }
+}
+
+/* 💻 Medium devices (≥768px and <992px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .login-form {
+    padding: 50px;
+  }
+}
+
+/* 🖥️ Large devices (≥992px) */
+@media (min-width: 992px) {
+  .login-form {
+    padding: 60px;
+  }
+}
 
 /* footer section */
 
