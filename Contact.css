@@ -1,0 +1,742 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #134d56;
+    /* dark teal background */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    /* so nav stays on top */
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* ---------------- HEADER ---------------- */
+
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo img {
+    border-radius: 13px;
+    height: 48px;
+    width: 48px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+
+.nav {
+    width: 100%;
+    height: 70px;
+    background-color: #0b2d32;
+
+}
+
+.nav-bar ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.nav-bar li {
+    margin: 15px;
+    list-style: none;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+#button {
+    background-color: rgb(126, 187, 34);
+    border-radius: 8px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+#button:hover {
+    background-color: rgb(186, 203, 38);
+    color: white;
+    box-shadow: 0 0 10px green;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: scale(1.1);
+}
+
+/* moto */
+
+.moto {
+    width: 100%;
+    height: 30px;
+    background-color: #D7CCC8;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+
+@media (max-width: 575.98px) {
+    .moto {
+        font-size: 12px;
+        height: 25px;
+        padding: 0 5px;
+        text-align: center;
+    }
+}
+
+/* Small devices (landscape phones, 576px–767.98px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .moto {
+        font-size: 14px;
+        height: 28px;
+    }
+}
+
+/* Medium devices (tablets, 768px–991.98px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .moto {
+        font-size: 15px;
+        height: 30px;
+    }
+}
+
+/* Large devices (desktops, 992px–1199.98px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .moto {
+        font-size: 16px;
+        height: 32px;
+    }
+}
+
+/* Extra large devices (1200px and up) */
+@media (min-width: 1200px) {
+    .moto {
+        font-size: 18px;
+        height: 35px;
+    }
+}
+
+/* ---------------- CONTACT SECTION ---------------- */
+.contact-container {
+    width: 100%;
+    max-width: 1100px;
+    padding: 20px;
+}
+
+.contact-box {
+    display: flex;
+    background: #000;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.contact-container {
+    width: 100%;
+    max-width: 1100px;
+    padding: 20px;
+    margin: 0 auto;
+    /* center container */
+}
+
+.contact-box {
+    display: flex;
+    background: #000;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+    overflow: hidden;
+    margin-top: 30px;
+    flex-direction: row;
+    gap: 20px;
+}
+
+/* ------------------ Responsive ------------------ */
+
+/* Extra small devices (phones <576px) */
+@media (max-width: 575.98px) {
+    .contact-box {
+        flex-direction: column;
+        /* stack vertically */
+        margin-top: 20px;
+        padding: 15px;
+    }
+
+    .contact-container {
+        padding: 15px 10px;
+    }
+}
+
+/* Small devices (576px–767.98px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .contact-box {
+        flex-direction: column;
+        margin-top: 25px;
+        padding: 15px;
+    }
+
+    .contact-container {
+        padding: 15px 15px;
+    }
+}
+
+/* Medium devices (768px–991.98px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .contact-box {
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .contact-container {
+        padding: 20px;
+    }
+}
+
+/* Large devices (992px and up) */
+@media (min-width: 992px) {
+    .contact-box {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .contact-container {
+        padding: 20px;
+    }
+}
+
+/* Left column */
+.contact-form {
+    flex: 1;
+    padding: 20px;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 0.9rem;
+    margin: 15px 0 5px;
+    color: #aaa;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    background: transparent;
+    border: 1px solid #00e5ff;
+    border-radius: 25px;
+    padding: 10px 15px;
+    font-size: 0.95rem;
+    color: white;
+    outline: none;
+    transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    box-shadow: 0 0 8px #00e5ff;
+}
+
+.contact-form textarea {
+    height: 100px;
+    resize: none;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.8rem;
+    color: #ccc;
+    width: fit-content;
+}
+
+.checkbox input {
+    accent-color: #00e5ff;
+    cursor: pointer;
+}
+
+.checkbox label {
+    cursor: pointer;
+    display: inline;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.checkbox span {
+    color: #00e5ff;
+}
+
+
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(90deg, #00e5ff, #00b3b3);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.5);
+}
+
+.contact-form button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 229, 255, 0.8);
+}
+
+@media (max-width: 575.98px) {
+    .contact-form {
+        padding: 15px;
+    }
+
+    .contact-form label {
+        font-size: 0.8rem;
+        margin: 10px 0 5px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+
+    .contact-form textarea {
+        height: 80px;
+    }
+
+    .checkbox {
+        font-size: 0.75rem;
+        gap: 6px;
+    }
+
+    .contact-form button {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+}
+
+/* Small devices (576px–767.98px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .contact-form {
+        padding: 18px;
+    }
+
+    .contact-form label {
+        font-size: 0.85rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 9px 13px;
+        font-size: 0.92rem;
+    }
+
+    .contact-form textarea {
+        height: 90px;
+    }
+
+    .checkbox {
+        font-size: 0.78rem;
+        gap: 8px;
+    }
+
+    .contact-form button {
+        padding: 11px;
+        font-size: 0.98rem;
+    }
+}
+
+/* Medium devices (768px–991.98px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .contact-form {
+        padding: 20px;
+    }
+
+    .contact-form label {
+        font-size: 0.9rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 10px 14px;
+        font-size: 0.95rem;
+    }
+
+    .contact-form textarea {
+        height: 95px;
+    }
+
+    .checkbox {
+        font-size: 0.8rem;
+    }
+
+    .contact-form button {
+        font-size: 1rem;
+        padding: 12px;
+    }
+}
+
+/* Large devices (992px and up) */
+@media (min-width: 992px) {
+    .contact-form {
+        padding: 20px;
+    }
+
+    .contact-form label {
+        font-size: 0.9rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 10px 15px;
+        font-size: 0.95rem;
+    }
+
+    .contact-form textarea {
+        height: 100px;
+    }
+
+    .checkbox {
+        font-size: 0.8rem;
+    }
+
+    .contact-form button {
+        font-size: 1rem;
+        padding: 12px;
+    }
+}
+
+/* Right column */
+.contact-info {
+    flex: 1;
+    padding: 40px;
+    text-align: left;
+}
+
+.contact-info h2 {
+    color: #00e5ff;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.icons {
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.icons img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: 0.3s;
+    filter: drop-shadow(0 0 8px #00e5ff);
+}
+
+.icons img:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 15px #00e5ff);
+}
+
+.charging-stations {
+    display: flex;
+    justify-content: center;
+    /* center the image */
+}
+
+.charging-stations img {
+    align-items: center;
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    opacity: 0.9;
+    margin-top: 20px;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 15px #00e5ff);
+}
+
+@media (max-width: 575.98px) {
+    .contact-info {
+        padding: 20px 10px;
+        text-align: center;
+    }
+
+    .contact-info h2 {
+        font-size: 1.4rem;
+    }
+
+    .contact-info p {
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+
+    .icons img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .charging-stations img {
+        max-width: 250px;
+    }
+}
+
+/* Small devices (576px–767.98px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .contact-info {
+        padding: 25px 15px;
+        text-align: center;
+    }
+
+    .contact-info h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact-info p {
+        font-size: 0.85rem;
+    }
+
+    .icons img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .charging-stations img {
+        max-width: 300px;
+    }
+}
+
+/* Medium devices (768px–991.98px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .contact-info {
+        padding: 30px 20px;
+    }
+
+    .contact-info h2 {
+        font-size: 1.6rem;
+    }
+
+    .contact-info p {
+        font-size: 0.9rem;
+    }
+
+    .icons img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .charging-stations img {
+        max-width: 320px;
+    }
+}
+
+/* Large devices (992px and up) */
+@media (min-width: 992px) {
+    .contact-info {
+        padding: 40px;
+    }
+
+    .contact-info h2 {
+        font-size: 1.8rem;
+    }
+
+    .contact-info p {
+        font-size: 0.95rem;
+    }
+
+    .icons img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .charging-stations img {
+        max-width: 350px;
+    }
+}
+
+/* Optional: Stack form and info vertically on small screens */
+@media (max-width: 767.98px) {
+    .contact-box {
+        flex-direction: column;
+    }
+}
+
+/* Clean morph effect (fade + zoom) */
+body {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: all 0.6s ease-in-out;
+}
+
+body.show-page {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* footer */
+footer {
+    background-color: #D7CCC8;
+    height: 270px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 200px;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.social-media img {
+    margin: 10px;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-media img:hover {
+    height: 48px;
+    width: 48px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: scale(1.2) translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 18px;
+}
+
+iframe {
+    justify-content: flex-end;
+    border-radius: 20px;
+}
+
+#twitter {
+    border-radius: 13px;
+}
+
+@media (max-width: 575.98px) {
+    footer {
+        flex-direction: column;
+        gap: 20px;
+        height: auto;
+        padding: 20px 10px;
+    }
+
+    .social-media img {
+        height: 35px;
+        width: 35px;
+    }
+
+    iframe {
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+    }
+}
+
+/* Small devices (576px–767.98px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    footer {
+        flex-direction: column;
+        gap: 30px;
+        height: auto;
+        padding: 25px;
+    }
+
+    .social-media img {
+        height: 38px;
+        width: 38px;
+    }
+
+    iframe {
+        width: 80%;
+        height: auto;
+    }
+}
+
+/* Medium devices (768px–991.98px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    footer {
+        flex-direction: row;
+        justify-content: center;
+        gap: 100px;
+        height: 250px;
+    }
+
+    .social-media img {
+        height: 40px;
+        width: 40px;
+    }
+
+    iframe {
+        width: 50%;
+        height: auto;
+    }
+}
+
+/* Large devices (992px–1199.98px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    footer {
+        gap: 150px;
+        height: 270px;
+    }
+
+    iframe {
+        width: 40%;
+    }
+}
+
+/* Extra large devices (1200px and up) */
+@media (min-width: 1200px) {
+    footer {
+        gap: 200px;
+        height: 270px;
+    }
+
+    iframe {
+        width: 35%;
+    }
+}

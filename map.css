@@ -18,6 +18,7 @@ html {
     scroll-behavior: smooth;
 }
 
+/* nav-bar part */
 .logo {
     position: absolute;
     top: 10px;
@@ -39,12 +40,10 @@ html {
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
 
-/* #FAFAFA
-#D7CCC8 */
 .nav {
     width: 100%;
     height: 70px;
-    background-color: #08775c;
+    background-color: #0b2d32;
 }
 
 .nav-bar ul {
@@ -69,6 +68,8 @@ html {
     transition: all 0.3s ease;
 }
 
+
+/* section part 1st */
 select {
     width: 200px;
     overflow: hidden;
@@ -95,6 +96,69 @@ select>option {
     transform: scale(1.1);
 }
 
+@media (max-width: 575.98px) {
+    select {
+        width: 90%;
+        font-size: 0.9rem;
+        padding: 6px 8px;
+    }
+
+    #button {
+        width: 90%;
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+}
+
+/* Small devices (576px–767.98px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    select {
+        width: 80%;
+        font-size: 0.95rem;
+        padding: 6px 9px;
+    }
+
+    #button {
+        width: 80%;
+        font-size: 0.95rem;
+        padding: 8px 14px;
+    }
+}
+
+/* Medium devices (768px–991.98px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    select {
+        width: 180px;
+    }
+
+    #button {
+        width: 180px;
+    }
+}
+
+/* Large devices (992px–1199.98px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    select {
+        width: 190px;
+    }
+
+    #button {
+        width: 190px;
+    }
+}
+
+/* Extra large devices (1200px and up) */
+@media (min-width: 1200px) {
+    select {
+        width: 200px;
+    }
+
+    #button {
+        width: 200px;
+    }
+}
+
+/* moto */
 .moto {
     width: 100%;
     height: 30px;
@@ -107,6 +171,50 @@ select>option {
     font-weight: 500;
 }
 
+
+@media (max-width: 575.98px) {
+    .moto {
+        font-size: 12px;
+        height: 25px;
+        padding: 0 5px;
+        text-align: center;
+    }
+}
+
+/* Small devices (landscape phones, 576px–767.98px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .moto {
+        font-size: 14px;
+        height: 28px;
+    }
+}
+
+/* Medium devices (tablets, 768px–991.98px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .moto {
+        font-size: 15px;
+        height: 30px;
+    }
+}
+
+/* Large devices (desktops, 992px–1199.98px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .moto {
+        font-size: 16px;
+        height: 32px;
+    }
+}
+
+/* Extra large devices (1200px and up) */
+@media (min-width: 1200px) {
+    .moto {
+        font-size: 18px;
+        height: 35px;
+    }
+}
+
+/* hero section */
+
 .main {
     width: 100%;
     height: calc(100vh - 100px);
@@ -115,6 +223,41 @@ select>option {
     flex-direction: column;
 }
 
+@media (max-width: 575.98px) {
+    .main {
+        height: auto;
+        /* let content determine height */
+        padding: 20px 10px;
+        /* optional padding for small screens */
+    }
+}
+
+/* Small devices (576px–767.98px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .main {
+        height: auto;
+        padding: 25px 15px;
+    }
+}
+
+/* Medium devices (768px–991.98px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .main {
+        height: calc(100vh - 100px);
+        /* keep same as desktop */
+        padding: 30px 20px;
+    }
+}
+
+/* Large devices (992px and up) */
+@media (min-width: 992px) {
+    .main {
+        height: calc(100vh - 100px);
+        padding: 40px 20px;
+    }
+}
+
+/* find cafes part */
 .middle {
     display: flex;
     align-items: center;
@@ -153,6 +296,119 @@ select>option {
     transform: scale(1.1);
 }
 
+.middle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px;
+    gap: 15px;
+    /* spacing between buttons */
+}
+
+.bn a,
+.bn1 a,
+.bn2 a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Button-specific font size and padding */
+.bn a {
+    font-size: 20px;
+    padding: 8px 15px;
+}
+
+.bn1 a {
+    font-size: 16px;
+    padding: 5px 10px;
+}
+
+/* Hover effects */
+.bn2:hover,
+.bn1:hover,
+.bn:hover {
+    color: white;
+    box-shadow: 0 0 10px rgb(185, 5, 5);
+    transform: scale(1.1);
+}
+
+/* ------------------ Responsive ------------------ */
+
+/* Extra small devices (phones <576px) */
+@media (max-width: 575.98px) {
+    .bn a {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+
+    .bn1 a {
+        font-size: 14px;
+        padding: 4px 8px;
+    }
+
+    .middle {
+        padding: 10px;
+        gap: 10px;
+    }
+}
+
+/* Small devices (576px–767.98px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .bn a {
+        font-size: 18px;
+        padding: 7px 13px;
+    }
+
+    .bn1 a {
+        font-size: 15px;
+        padding: 5px 9px;
+    }
+
+    .middle {
+        gap: 12px;
+    }
+}
+
+/* Medium devices (768px–991.98px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .bn a {
+        font-size: 19px;
+        padding: 8px 14px;
+    }
+
+    .bn1 a {
+        font-size: 15.5px;
+        padding: 5px 10px;
+    }
+
+    .middle {
+        gap: 14px;
+    }
+}
+
+/* Large devices (992px and up) */
+@media (min-width: 992px) {
+    .bn a {
+        font-size: 20px;
+        padding: 8px 15px;
+    }
+
+    .bn1 a {
+        font-size: 16px;
+        padding: 5px 10px;
+    }
+
+    .middle {
+        gap: 15px;
+    }
+}
+
+/* map part */
+
 #map {
     height: 500px;
     width: 80%;
@@ -178,6 +434,84 @@ button {
     display: flex;
 }
 
+@media (max-width: 575.98px) {
+    #map {
+        width: 95%;
+        height: 300px;
+    }
+
+    input,
+    select,
+    button {
+        width: 100%;
+        font-size: 0.9rem;
+        padding: 6px;
+        margin: 3px 0;
+    }
+
+    .search {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+}
+
+/* Small devices (576px–767.98px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    #map {
+        width: 90%;
+        height: 350px;
+    }
+
+    input,
+    select,
+    button {
+        width: 90%;
+        font-size: 0.95rem;
+        padding: 7px;
+    }
+
+    .search {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Medium devices (768px–991.98px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    #map {
+        width: 85%;
+        height: 400px;
+    }
+
+    input,
+    select,
+    button {
+        width: auto;
+    }
+
+    .search {
+        flex-direction: row;
+    }
+}
+
+/* Large devices (992px–1199.98px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    #map {
+        width: 80%;
+        height: 450px;
+    }
+}
+
+/* Extra large devices (1200px and up) */
+@media (min-width: 1200px) {
+    #map {
+        width: 80%;
+        height: 500px;
+    }
+}
+
+/* cafe part */
 #cafe {
     padding: 40px;
     text-align: center;
@@ -285,6 +619,85 @@ button a {
     color: white;
 }
 
+@media (max-width: 575.98px) {
+    .cafelist {
+        width: 90%;
+        height: auto;
+        padding: 15px 0;
+    }
+
+    .image img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .content2 p {
+        font-size: 1em;
+    }
+
+    .overlay {
+        font-size: 16px;
+    }
+
+    .overlay ul {
+        font-size: 10px;
+        gap: 4px;
+    }
+}
+
+/* Small devices (576px–767.98px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .cafelist {
+        width: 45%;
+        height: auto;
+        padding: 15px 0;
+    }
+
+    .image img {
+        width: 110px;
+        height: 110px;
+    }
+
+    .content2 p {
+        font-size: 1.05em;
+    }
+}
+
+/* Medium devices (768px–991.98px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .cafelist {
+        width: 200px;
+        height: 220px;
+    }
+
+    .image img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .content2 p {
+        font-size: 1.1em;
+    }
+}
+
+/* Large devices (992px–1199.98px) */
+@media (min-width: 992px) {
+    .cafelist {
+        width: 250px;
+        height: 250px;
+    }
+
+    .image img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .content2 p {
+        font-size: 1.2em;
+    }
+}
+
+/* footer part */
 
 footer {
     background-color: #D7CCC8;
@@ -329,4 +742,88 @@ iframe {
 
 #twitter {
     border-radius: 13px;
+}
+
+@media (max-width: 575.98px) {
+    footer {
+        flex-direction: column;
+        gap: 20px;
+        height: auto;
+        padding: 20px 10px;
+    }
+
+    .social-media img {
+        height: 35px;
+        width: 35px;
+    }
+
+    iframe {
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+    }
+}
+
+/* Small devices (576px–767.98px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    footer {
+        flex-direction: column;
+        gap: 30px;
+        height: auto;
+        padding: 25px;
+    }
+
+    .social-media img {
+        height: 38px;
+        width: 38px;
+    }
+
+    iframe {
+        width: 80%;
+        height: auto;
+    }
+}
+
+/* Medium devices (768px–991.98px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    footer {
+        flex-direction: row;
+        justify-content: center;
+        gap: 100px;
+        height: 250px;
+    }
+
+    .social-media img {
+        height: 40px;
+        width: 40px;
+    }
+
+    iframe {
+        width: 50%;
+        height: auto;
+    }
+}
+
+/* Large devices (992px–1199.98px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    footer {
+        gap: 150px;
+        height: 270px;
+    }
+
+    iframe {
+        width: 40%;
+    }
+}
+
+/* Extra large devices (1200px and up) */
+@media (min-width: 1200px) {
+    footer {
+        gap: 200px;
+        height: 270px;
+    }
+
+    iframe {
+        width: 35%;
+    }
 }
