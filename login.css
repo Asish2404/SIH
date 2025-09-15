@@ -523,21 +523,26 @@
   .login-form {
     padding: 30px 20px;
   }
+
   .login-form h2 {
     font-size: 22px;
   }
+
   .login-form p {
     font-size: 12px;
   }
-  .login-form input, 
+
+  .login-form input,
   .login-form button {
     font-size: 14px;
     padding: 10px;
   }
+
   .social-login {
     flex-direction: column;
     gap: 10px;
   }
+
   .social-login button {
     width: 100%;
   }
@@ -548,12 +553,15 @@
   .login-form {
     padding: 40px;
   }
+
   .login-form h2 {
     font-size: 24px;
   }
+
   .login-form p {
     font-size: 13px;
   }
+
   .social-login {
     gap: 15px;
   }
