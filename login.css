@@ -411,6 +411,10 @@
   font-size: 28px;
 }
 
+#sign_in {
+  color: #000000;
+}
+
 .login-form p {
   margin-bottom: 30px;
   font-size: 14px;

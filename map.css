@@ -566,6 +566,9 @@ button {
     margin-top: 10px;
 }
 
+#cafe h2{
+    color: #000000;
+}
 
 .overlay {
     position: absolute;
