@@ -32,6 +32,7 @@
 
 /* #FAFAFA
 #D7CCC8 */
+
 .nav {
     width: 100%;
     height: 70px;
@@ -50,6 +51,7 @@
     list-style: none;
 }
 
+/* 
 .nav-bar a {
     text-decoration: none;
     color: white;
@@ -58,7 +60,53 @@
     padding: 8px 15px;
     border-radius: 5px;
     transition: all 0.3s ease;
+} */
+.nav-bar a {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  position: relative;
+  color: #e0e0e0; /* light gray for normal state */
+  border-radius: 0.75rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+.nav-bar a.active {
+  background-color: #f5f5f5; /* off-white background */
+  color: #0b2d32;            /* dark text for contrast */
+}
+
+/* View Transition animations */
+::view-transition-old(nav-item),
+::view-transition-new(nav-item) {
+  height: 100%;
+}
+
+::view-transition-group(nav-item) {
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-duration: 0.6s; /* smoother & slower */
+}
+
+
+/* optional: keep the bounce curve available */
+:root {
+  --bounce: linear(
+    0,
+    1 37.8%,
+    0.883 44.2%,
+    0.855 47.1%,
+    0.846 50%,
+    0.853 52.7%,
+    0.875 55.5%,
+    1 65.5%,
+    0.967 69.4%,
+    0.957 73.1%,
+    0.964 76.5%,
+    1 84.5%,
+    0.993 89.3%,
+    1
+  );
+}
+
 
 #button {
     background-color: rgb(126, 187, 34);
@@ -130,6 +178,56 @@
     }
 }
 
+/* theme */
+
+/* body {
+      margin: 0;
+      font-family: sans-serif;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    body.dark-mode {
+      background: #121212;
+      color: #f5f5f5;
+    }
+
+    .toggle-container {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+    }
+
+    .toggle-btn {
+      width: 60px;
+      height: 30px;
+      background: #ddd;
+      border-radius: 30px;
+      position: relative;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .toggle-btn::before {
+      content: "";
+      width: 24px;
+      height: 24px;
+      background: #fff;
+      border-radius: 50%;
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      transition: transform 0.3s;
+    }
+
+    body.dark-mode .toggle-btn {
+      background: #555;
+    }
+
+    body.dark-mode .toggle-btn::before {
+      transform: translateX(30px);
+      background: #ffdd57;
+    } */
+
 /* hero section */
 .middle {
     height: 600px;
@@ -147,7 +245,6 @@
 }
 
 .middle-img img {
-
     height: 550px;
     width: 100%;
     border-radius: 20px;
@@ -162,7 +259,6 @@
 
 html {
     scroll-behavior: smooth;
-
 }
 
 .content {
@@ -1462,7 +1558,8 @@ iframe {
     }
 
     iframe {
-        width: 40%;
+        height: 200px;
+        width: max-content;
     }
 }
 
@@ -1474,6 +1571,7 @@ iframe {
     }
 
     iframe {
-        width: 35%;
+        height: 200px;
+        width: max-content;
     }
 }

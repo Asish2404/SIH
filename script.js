@@ -1,21 +1,21 @@
-// Animate boxes on scroll
-const boxes = document.querySelectorAll('.slide-in');
 
-window.addEventListener('scroll', () => {
-  const triggerBottom = window.innerHeight * 0.85;
+// const toggle = document.getElementById("theme-toogle"); // must match your HTML
+// const body = document.body;
 
-  boxes.forEach((box, index) => {
-    const boxTop = box.getBoundingClientRect().top;
+// // Load saved theme
+// if (localStorage.getItem("theme") === "dark") {
+//   body.classList.add("dark-mode");
+// }
 
-    if (boxTop < triggerBottom) {
-      box.style.transitionDelay = `${index * 0.2}s`; // staggered entry
-      box.classList.add('show');
-    } else {
-      box.classList.remove('show');
-      box.style.transitionDelay = '0s';
-    }
-  });
-});
+// // Toggle theme on click
+// toggle.addEventListener("click", () => {
+//   body.classList.toggle("dark-mode");
+//   if (body.classList.contains("dark-mode")) {
+//     localStorage.setItem("theme", "dark");
+//   } else {
+//     localStorage.setItem("theme", "light");
+//   }
+// });
 const allLinks = document.querySelectorAll(".nav-bar a");
 
 allLinks.forEach((link) => {
@@ -38,3 +38,4 @@ allLinks.forEach((link) => {
     });
   });
 });
+
